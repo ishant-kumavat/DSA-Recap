@@ -47,7 +47,8 @@ public:
 //     Time Complexity : O(n)
 //     Space Complexity : O(1)
 #include <bits/stdc++.h>
-using namespace std;class Solution {
+using namespace std;
+class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
         int n=nums.size();
@@ -62,7 +63,8 @@ public:
 };
 
 // 4). Optimal Solution III => Using Kadane's Algorithm.
-//     If the question asks for the first and last indices of the subarray instead of the maximum value.
+// Kadane's Algorithm with index tracking.
+// Returns the starting and ending indices of the maximum sum subarray.
 //     Time Complexity : O(n)
 //     Space Complexity : O(1)
 
