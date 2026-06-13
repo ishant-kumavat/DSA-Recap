@@ -60,3 +60,30 @@ public:
         return ans;
     }
 };
+
+// 4). Optimal Solution III => Using Kadane's Algorithm.
+//     If the question asks for the first and last indices of the subarray instead of the maximum value.
+//     Time Complexity : O(n)
+//     Space Complexity : O(1)
+
+#include <bits/stdc++.h>
+using namespace std;
+class Solution {
+public:
+    vector<int> maxSubArray(vector<int>& nums) {
+        int n=nums.size();
+        int sum=0,mx=INT_MIN;
+        int temp_idx=0,st_idx=-1,ed_idx=-1;
+        for(int i=0;i<n;i++){
+            if(sum==0) temp_idx=i;
+            sum+=nums[i];
+            if(mx<sum){
+                mx=sum;
+                st_idx=temp_idx;
+                ed_idx=i;
+            }
+            if(sum<0) sum=0;
+        }
+        return {st_idx,ed_idx};
+    }
+};
