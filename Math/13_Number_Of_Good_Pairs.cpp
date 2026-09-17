@@ -1,4 +1,4 @@
-// LeetCode 1512 => ** 1 **
+// LeetCode 1512 => ** Number of Good Pairs **
 
 // 1). Brute Force Approach => Pair Comparison
 //     Time Complexity : O(n ^ 2) 
