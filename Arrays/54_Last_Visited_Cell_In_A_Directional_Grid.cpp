@@ -32,3 +32,26 @@ public:
         return {p, q};
     }
 };
+
+// Use a visited matrix to track cells
+// that have already been visited.
+//
+// Start from cell (0, 0).
+//
+// Before processing a cell, check whether it
+// has already been visited.
+//
+// If the cell is visited again, return the
+// coordinates of the last visited cell.
+//
+// Otherwise, mark the current cell as visited
+// and update `p` and `q` with its coordinates.
+//
+// Move in the direction specified by the cell:
+// L -> Left, R -> Right,
+// U -> Up, D -> Down.
+//
+// Stop when the current position goes outside
+// the grid boundaries.
+//
+// Return the coordinates of the last visited cell.
